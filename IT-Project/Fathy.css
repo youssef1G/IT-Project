@@ -52,6 +52,7 @@
     padding: 30px 50px;
   }
 
+
   .cards-place:hover >:not(:hover){
         opacity:0.7;
     transform: scale(0.7);
@@ -142,8 +143,9 @@ nav ul:hover > :not(:hover){
 
 
 .btn {
-border-radius:10px;
-border-style:none;
+    border-radius:10px;
+    border-style:none;
+    transition: 0.3s ease;
 }
 
 .btn:hover{
@@ -151,6 +153,7 @@ border-style:none;
     color: white;
     padding: 5px 15px;
     border-radius: 15px;
+    transition: 0.3s ease;
   }
   
   footer {
