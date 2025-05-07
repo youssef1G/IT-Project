@@ -11,16 +11,32 @@
     <link rel="stylesheet" href="Nouran.css">
 </head>
 <body>
+
     <div class="yoo">
-        <form>
+        <form action="mosaab.html" onsubmit="return validateForm()">
             <h2>Log in</h2>
             <label for="username">username</label><br>
             <input class="button" type="text" id="username" required placeholder="Username"><br>
             <label for="password">password</label><br>
-            <input class="button" type="password" id="password" required placeholder="please enter complex password" maxlength="16"><br>
-            <a href="Mosaab.html" class="Log">Log in</a>
+            <input class="button" type="password" id="password" required placeholder="Password" maxlength="16"><br>
+            <button class="Log" type="submit"><b>Log in</b></button>
             <p>Don't have an account? <a href="Nada.html">sign up</a></p>
         </form>
     </div>
+    <script>
+      function validateForm() {
+        const name = document.getElementById("username").value;
+        const Password = document.getElementById("password").value;
+
+
+        if (name === "" || Password==="") {
+          alert("these cannot be empty!");
+          return false;
+        }
+        alert("welcome to V8!");
+        return true;
+      }
+    </script>
 </body>
 </html>
+
