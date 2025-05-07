@@ -1,0 +1,195 @@
+* {
+box-sizing: border-box;}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration:none;
+    color:white;
+}
+
+.logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 50px;
+    border-radius: 8px;
+    width:100%;
+
+}
+
+
+nav {
+    display:flex;
+    justify-content:center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    background:#333;
+    padding: 8px 12px;
+    border-radius:50px;
+    min-width:80px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #e8e6e6;
+    background:grey;
+}
+#logout:hover{
+    background:red;}
+
+nav ul:hover > :not(:hover){
+    opacity:0.7;
+    transform: scale(0.7);
+    transition: all 0.5s ease;
+}
+
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+
+}
+button {
+    background-color: darkgrey;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-style: none;
+}
+
+button:hover {
+    cursor:pointer;
+    background:grey;
+    transform:scale(0.9);
+    transition: all 0.2s ease;}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.options:hover > :not(:hover){
+    opacity:0.7;
+    transform: scale(0.75);
+    transition: all 0.5s ease;
+}
+
+.option {
+    border: 1px solid #ccc;
+    padding: 15px;
+    width: 200px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: darkgrey;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    cursor:pointer;
+    background:grey;
+    transform:scale(0.9);
+    transition: all 0.2s ease;
+}
+
+ input {
+    border-style:groove;
+    border-color:black;
+    border-radius:7px;
+}
+
+input:focus {
+      border-radius :7px;
+      border-color: black;
+      box-shadow: 0 0 5px grey;
+      transform:scale(1.2);
+      transition: all 0.3s ease;
+}
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+
+   
+}
+
+
+

@@ -1,0 +1,191 @@
+/* جيبنا الخط من جوجل عشان نستخدمه في الموقع */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@700&display=swap');
+
+
+
+/* هنروق علي الصصفحه عشان ميبقاش فيه مسافات فاضيه*/
+*{
+    padding: 0; /* نخلي كل الحشو الداخلي صفر */
+    margin: 0; /* نخلي كل الهوامش الخارجية صفر */
+    font-family: "Special Gothic Expanded One","Lemonada", sans-serif; /* نحدد نوع الخط اللي هيتكتب بيه كل حاجة */
+}
+
+/* دلوقتي هنعمل ستايل للصفحة كلها */
+body{
+    background: linear-gradient(white,gray); /* هنعمل خلفية بتتدرج من اللون الأبيض للرمادي */
+    height: 100vh; /* نخلي ارتفاع الصفحة يساوي ارتفاع الشاشة كلها */
+    width: 100%; /* نخلي عرض الصفحة يساوي عرض الشاشة كلها */
+    display: flex; /* نخلي العناصر تترتب بطريقة الفليكس */
+    justify-content: center;  /* نخلي كل العناصر تتوسط من الشمال لليمين */
+    align-items: center;  /* نخلي كل العناصر تتوسط من فوق لتحت */
+}
+
+/* هنظبط الخلفيه عشان تبقي موت*/
+body::after{
+    content: ''; /* دي عنصر وهمي مش حقيقي */
+    width: 100%; /* نخليه ياخد عرض الصفحة كلها */
+    height: 100%; /* نخليه ياخد ارتفاع الصفحة كلها */
+    background: #bcbcbc; /* لونه رمادي فاتح */
+    position: absolute; /* نخليه يطفو فوق الصفحة */
+    z-index: -1; /* نخليه تحت كل العناصر التانية */
+    clip-path: circle(40% at right 70% ); /* نخليه يظهر على شكل دائرة في الجنب */
+}
+
+/* دلوقتي هنعمل اساس الموقع */
+.container {
+    width: 80%; /* عرضها 80% من الشاشة */
+    height: 80%; /* ارتفاعها 80% من الشاشة */
+    background: rgba(255, 255, 255, 0.1); /*  لونها أبيض شفاف شوية اللي هو التاثير الزجاجي*/
+    border-radius: 20px; /* نخلي الزوايا مدورة */
+
+}
+
+/* النافبار  */
+nav{
+    display: flex; /* نخلي العناصر تترتب بطريقة الفليكس */
+    justify-content: space-between; /* نخلي العناصر تتباعد عن بعض */
+    align-items: center; /*كده هيتوسطنو بالطول*/
+    width: 80%; /* عرضه 80% من الحاوية الكبيره */
+    margin: auto; /* وكده هيتوسطنو بالهرض*/
+    padding: 20px 0; /* حشو من فوق وتحت */
+}
+
+/* ستايل اللوجو */
+nav .logo{
+    color: black; /* لونه أسود */
+    text-decoration: none; /* عشان نشيل الخط اللي تحت الكلام */
+    font-size: 32px; /* حجم الخط كبير */
+    text-transform: uppercase; /* نخلي كل الحروف كابتل */
+    letter-spacing: 3px; /* نخلي مسافة بين كل حرف والتاني */
+    font-weight: 700; /* نخلي الخط سميك */
+}
+
+/* ستايل القوائم */
+nav ul li {
+    display: inline-block; /* نخليهم يظهروا في سطر واحد */
+    margin: 0 3px; /* نخلي مسافة بين كل قائمة والتانية */
+}
+
+/* ستايل الروابط في القوائم */
+nav ul li a{
+    color: black ; /* لونها أسود */
+    text-decoration: none; /* عشان نشيل الخط اللي تحتهم */
+    font-size: 16px; /* حجم الخط */
+    font-weight: 500; /* سمك الخط */
+    display: inline-block;/*لازم عشان الترانسفورم يشتغل */
+}
+
+ nav ul li button{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: none;
+   
+ }
+
+
+
+ nav ul li button:hover{
+    color: red;/*تحول لون العنصر الي الحمر لما الماوس يعدي عليه*/
+    transform: scale(1.1);/*بيخلي العنصر يكبر شويه لما نعدي الماوس عليه*/
+ }
+ 
+
+/* لما الماوس يعدي على الروابط */
+nav ul li a:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+
+/* القوائم المنسدلة */
+ul li ul.dropdown li {
+    display: block; /* نخلي كل عنصر يظهر في سطر لوحده */
+}
+
+/* ستايل القائمة المنسدلة */
+ul li ul.dropdown{
+    width: 10%; /* عرضها 10% */
+    background-color: transparent; /* خلفية شفافة */
+    position: absolute; /* نخليها تطفو فوق الصفحة */
+    z-index: 999; /* نخليها فوق كل العناصر */
+    display: none; /* نخليها متظهرش في الأول */
+}
+
+/* لما الماوس يعدي على القائمة الأم */
+ul li:hover ul.dropdown {
+    display: block; /* نخلي القائمة المنسدلة تظهر */
+}
+
+/* المحتوى الأساسي في الصفحة */
+.content{
+    display: flex; /* نخلي العناصر تترتب بالفليكس */
+    justify-content: space-between; /* نخليهم يتباعدوا عن بعض */
+    align-items: center; /* نخليهم يتوسطنو من فوق وتحت  ا */
+    height: 100%; /* ارتفاع كامل */
+    width: 80%; /* عرض 80% */
+    margin: auto; /* نخليهم يتوسطنو من يمين وشمال */
+}
+
+/* الجزء الخاص بالنصوص */
+.content .text{
+    color: black; /* لون أسود */
+    width: 40%; /* عرضه 40% من المساحة */
+}
+
+/* العناوين الكبيرة */
+.content .text h2{
+    font-size: 40px; /* حجم كبير */
+    text-transform: uppercase; /* حروف كابتل */
+    font-weight: 700; /* خط سميك */
+    letter-spacing: 2px; /* مسافة بين الحروف */
+}
+
+/* الفقرات */
+.content .text p{
+    font-size: 18px; /* حجم متوسط */
+    line-height: 25px; /* مسافة بين السطور */
+    margin: 10px 0; /* هامش فوق وتحت */
+    letter-spacing: 1px; /* مسافة بسيطة بين الحروف */
+}
+
+/* الجزء الخاص بالصورة */
+.content .image{
+    width: 60%; /* عرضه 60% من المساحة */
+}
+
+/* ستايل الصورة نفسها */
+.content .image img{
+    width: 100%; /* عرضها يملأ المساحة المتاحة */
+    height: auto; /* الارتفاع يتعدل تلقائيًا */
+}
+
+/* ستايلات خاصة للشاشات المتوسطة */
+@media (min-width:950px) and (max-width:1150px){
+    .content .image img{
+        width: 330px; /* حجم الصورة يبقى ثابت */
+    }
+    
+   
+}
+
+/* ستايلات خاصة للتلفون */
+@media (max-width:950px) {
+    .content, nav{
+        flex-direction: column; /* نخلي العناصر تترتب تحت بعض */
+        justify-content: center; /* توسيط رأسي */
+    }
+
+    .content .image, .content .text{
+        width: 100%; /* نخليهم ياخدوا العرض كله */
+    }
+
+    /* نخلي الدائرة الخلفية تبقى في الأسفل */
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+}

@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Inter;
+}
+
+form {
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: #bcbcbc;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+h2 {
+    padding: 0px;
+}
+
+.Log {
+    background-color: transparent;
+    font-size: 30px;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+}
+
+.button {
+    background-color: transparent;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(215, 33, 5, 0.5);
+}
+
+p {
+    font-size: 20px;
+}
+
+form a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.yoo {
+    margin-top: 135px;
+    margin-bottom: 135px;
+    text-align: center;
+}
+
+.Log {
+    display: inline-block;
+    text-align: center;
+    background-color: transparent;
+    font-size: 30px;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    line-height: 40px;
+    text-decoration: none;
+    border: 2px solid black;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        font-size: 70px;
+    }
+
+    form {
+        width: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 50px;
+    }
+
+    form {
+        width: 90%;
+        margin: 10px auto;
+        font-size: 24px;
+    }
+
+    .button {
+        width: 90%;
+    }
+
+    .sign {
+        font-size: 24px;
+        width: 120px;
+    }
+}

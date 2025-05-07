@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>V8 ZONE - News</title>
+  <link rel="website icon" type="image/png" href="./images/Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter;
+      background-color: #f5f5f5;
+    }
+
+    header {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration:none;
+    color:white;
+}
+
+.logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 50px;
+    border-radius: 8px;
+    width:100%;
+
+}
+
+
+nav {
+    display:flex;
+    justify-content:center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    background:#333;
+    padding: 8px 12px;
+    border-radius:50px;
+    min-width:80px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #e8e6e6;
+    background:grey;
+}
+#logout:hover{
+    background:red;}
+
+nav ul:hover > :not(:hover){
+    opacity:0.7;
+    transform: scale(0.7);
+    transition: all 0.5s ease;
+}
+
+
+    .news-card {
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: top;
+      gap: 20px;
+    }
+    .x {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-card img {
+      width: 600px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(24, 59, 232, 0.3);
+    }
+
+    .news-title {
+      font-size: 20px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+
+    .news-text {
+      font-size: 15px;
+      color: #333;
+      flex-grow: 1;
+    }
+    footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+    footer .foo {
+      margin-top: 10px;
+      font-size: 14px;
+      color: white;
+    } 
+    .icon {
+      margin-top: 20px;
+      margin-bottom: 20px;
+  text-align: center;
+}
+    .icon img {
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+}
+/* For Tablets (portrait and landscape) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .site-title {
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .links a {
+    padding: 0 10px;
+  }
+
+  .news-section {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .news-title {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .news-text {
+    font-size: 14px;
+  }
+}
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex;
+    flex-direction: row;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .site-title {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .links a {
+    padding: 0 8px;
+    font-size: 14px;
+  }
+
+  .news-section {
+    grid-template-columns: 1fr;
+  }
+
+  .news-title {
+    font-size: 16px;
+  }
+
+  .news-text {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  .news-card img {
+    width: 120px;
+    height: 80px;
+  }
+}
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+#topBtn:hover {
+  background-color: #555;
+}
+
+
+/*  da el responsive e;y ana 3amlo ypissef gamal. */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+    }
+}
+  </style>
+  <script>
+  // Show button after scrolling down 20px
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  const topBtn = document.getElementById("topBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+}
+// Scroll to top function
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function changeImage(img) {
+  const src = img.src;
+
+  if (src.includes("mazda1")) {
+    img.src = "./images/mazda2.jpg";
+  } else if (src.includes("mazda2")) {
+    img.src = "./images/mazda3.jpg";
+  } else if (src.includes("mazda3")) {
+    img.src = "./images/mazda1.avif";
+  }
+
+  if (src.includes("nissan1")) {
+    img.src = "./images/nissan2.jpg";
+  } else if (src.includes("nissan2")) {
+    img.src = "./images/nissan3.webp";
+  } else if (src.includes("nissan3")) {
+    img.src = "./images/nissan1.jpg";
+  }
+
+  if (src.includes("porche1") || src.includes("porsche1")) {
+    img.src = "./images/porsche2.jpg";
+  } else if (src.includes("porsche2")) {
+    img.src = "./images/porsche3.jpg";
+  } else if (src.includes("porsche3")) {
+    img.src = "./images/porche1.avif";
+  }
+
+  if (src.includes("tesla1")) {
+    img.src = "./images/tesla3.jpg";
+  } else if (src.includes("tesla3")) {
+    img.src = "./images/tesla2.jpg";
+  } else if (src.includes("tesla2")) {
+    img.src = "./images/tesla1.avif";
+  }
+
+  if (src.includes("ZR1")) {
+    img.src = "./images/ZR2.jpg";
+  } else if (src.includes("ZR2")) {
+    img.src = "./images/ZR3.jpg";
+  } else if (src.includes("ZR3")) {
+    img.src = "./images/ZR1.avif";
+  }
+
+  if (src.includes("AMG1")) {
+    img.src = "./images/AMG2.jpg";
+  } else if (src.includes("AMG2")) {
+    img.src = "./images/AMG3.jpg";
+  } else if (src.includes("AMG3")) {
+    img.src = "./images/AMG1.webp";
+  }
+}
+
+  </script>
+</head>
+<body>
+<!-- this is header -->
+ <!-- el header goah el logo 3al shemal w el nav bar 3al ymyn w fel nos el title.-->
+  <!-- 3andak el nav bar m3molh 3la shakl div goah 4 links w wa7ed btn -->
+  <header>
+    <a href="./Mosaab.html" class="logo">
+        <img src="./images/Logo.png">
+        <p>V8 ZONE</p>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="./Mosaab.html">Home</a></li>
+            <li><a href="./Fathy.html">Cars</a></li>
+            <li><a href="./Mazen.html">Sales</a></li>
+            <li><a href="./Youssef.html">Finance</a></li>
+            <li><a href="./Mohab.html">About Us</a></li>
+            <li><a href="./Adam.html">Contact Us</a></li>
+            <li><a href="./Nouran.html" id="logout"> Log Out</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- e5tarna el div badal el paragraph 3shan el div mby3mlsh margins aw padding. -->
+ <!-- 3amlt 6 divat ly 6 3arabyat w sminah kol div news-card 3shan ely y7sl 3la 3arabeyh   -->
+  <!-- mazda -->
+    <div class="news-card">
+      <img onclick="changeImage(this)" src="./images/mazda1.avif" alt="Car 1">
+      <div class="x">
+      <div class="news-title">Mazda RX-Vision</div>
+      <p class="news-text">The Mazda RX-Vision is a concept car unveiled by Mazda at the 2015 Tokyo Motor Show. This sleek, two-door coupe showcases Mazda's vision for a future sports car powered by a next-generation rotary engine, the SKYACTIV-R. The RX-Vision embodies Mazda's commitment to innovation and its "never-stop-challenging" spirit. 
+
+        Design-wise, the RX-Vision features a long hood, low stance, and rear-wheel-drive layout, reflecting Mazda's KODO design philosophy. The compact rotary engine allows for a lower hood line and a more aggressive profile.</p>
+    </div>
+  </div>
+    <!-- nissan -->
+    <div class="news-card">
+      <img onclick="changeImage(this)" src="./images/nissan1.jpg" alt="Car 2">
+      <div class="x">
+      <div class="news-title">Nissan GT-R Nismo</div>
+      <p class="news-text">The 2025 Nissan GT-R Nismo is expected to arrive in Egypt with a starting price of approximately EGP 9,030,580 (around $192,140 USD). This model continues the legacy of the GT-R with a focus on performance and efficiency.​The 2025 model is anticipated to feature a redesigned 3.8L V6 engine that combines classic performance with improved fuel efficiency and reduced emissions. Exterior design updates are expected to include a more aggressive stance and enhanced aerodynamics.</p>
+    </div>
+  </div>
+    <!-- porcshe -->
+    <div class="news-card">
+      <img onclick="changeImage(this)" src="./images/porche1.avif" alt="Car 3">
+      <div class="x">
+      <div class="news-title">Porsche 911 Turbo S</div>
+      <p class="news-text">The 2025 Porsche 911 Turbo S is set to be a significant evolution in Porsche's iconic lineup, introducing hybrid technology and performance enhancements that elevate its status as a high-performance sports car.For the first time, the 2025 Turbo S will feature Porsche’s T-Hybrid system, integrating an electric motor into the eight-speed PDK transmission. This setup, similar to the one used in the 992.2 Carrera GTS, aims to reduce turbo lag and improve throttle response. The system is expected to deliver a combined output of approximately 710 horsepower, a notable increase from the current 640 hp</p>
+    </div>
+  </div>
+<!-- tesla -->
+    <div class="news-card">
+      <img onclick="changeImage(this)" src="./images/tesla2.jpg" alt="Car 4">
+      <div class="x">
+      <div class="news-title">Tesla Model S Plaid</div>
+      <p class="news-text">While the core performance features remain consistent, the 2025 Model S Plaid may include incremental updates in software and hardware. Tesla frequently releases over-the-air software updates that enhance vehicle functionality and user experience. For detailed information on any specific changes, it's best to consult Tesla's official communications or your local dealership.</p>
+    </div>
+  </div>
+<!-- chevorlet -->
+    <div class="news-card">
+      <img onclick="changeImage(this)" src="./images/ZR1.avif" alt="Car 5">
+      <div class="x">
+      <div class="news-title">Chevrolet Corvette ZR1</div>
+      <p class="news-text">The 2025 Corvette ZR1 is Chevrolet’s most powerful production car ever, setting a new benchmark for American performance. It builds on the C8 platform and combines extreme horsepower with advanced aerodynamics and a stunning design.The 2025 Corvette ZR1 is a true track weapon, delivering hypercar-level performance at a price that seriously undercuts European rivals. With 1,000+ horsepower, sub-10-second quarter-mile times, and serious aero, this is the most extreme Corvette ever built.</p>
+    </div>
+  </div>
+    <!-- mercedes -->
+    <div class="news-card">
+      <img onclick="changeImage(this)" src="./images/AMG1.webp" alt="Car 6">
+      <div class="x">
+      <div class="news-title">Mercedes-AMG GT Black Series</div>
+      <p class="news-text">The 2025 Mercedes-AMG GT is a luxury performance coupe and 4-door fastback offering powerful V8 and hybrid engine options.
+        Top models like the GT 63 S E Performance deliver up to 843 hp and 1,034 lb-ft of torque with a hybrid setup.
+        It features AMG 4MATIC+ all-wheel drive, adaptive suspension, and advanced aerodynamics for superior handling.
+        Inside, it blends high-end materials with cutting-edge tech, including a digital cockpit and premium audio.
+        This lineup offers a perfect mix of everyday usability, aggressive styling, and track-ready performance.</p>
+    </div>
+  </div>
+  <button onclick="scrollToTop()" id="topBtn" title="Go to top">Top</button>
+  <footer>
+    <div class="foo">&copy; 2025 V8 ZONE. All rights reserved</div>
+  </footer>
+</body>
+</html>

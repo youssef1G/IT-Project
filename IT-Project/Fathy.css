@@ -1,0 +1,252 @@
+.body {
+    margin: 0;
+    font-family: "Inter";
+    
+    
+  }
+  .main{
+    background-color: #bcbcbc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    border-radius: 0px 0px 80px 80px;
+    font-family: "Inter";
+  }
+  .search input{
+    border-radius: 15px;
+    padding: 5px 15px;
+    height: 15px;
+    border-style:none;
+    
+    
+  }
+  .Models{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+
+  }
+  .Models button{
+    background-color:grey;
+    color: black;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-family: "Special Gothic Expanded One"
+    
+  }
+  .Models button:hover{
+    background-color: #343434;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+  }
+  .cards-place{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+  }
+
+  .cards-place:hover >:not(:hover){
+        opacity:0.7;
+    transform: scale(0.7);
+    transition: all 0.5s ease;
+  }
+  .card{
+    background-color:#bcbcbc;
+    border-radius: 20px;
+    display: inline-table;
+    padding: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+  }
+  .card img{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+  }
+  header {
+    background-color: #444;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration:none;
+    color:white;
+}
+
+.logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 50px;
+    border-radius: 8px;
+    width:100%;
+
+}
+
+
+nav {
+    display:flex;
+    justify-content:center;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    background:#444;
+    padding: 8px 12px;
+    border-radius:50px;
+    min-width:80px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #e8e6e6;
+    background:grey;
+}
+#logout:hover{
+    background:red;}
+
+nav ul:hover > :not(:hover){
+    opacity:0.7;
+    transform: scale(0.7);
+    transition: all 0.5s ease;
+}
+
+
+.btn {
+border-radius:10px;
+border-style:none;
+}
+
+.btn:hover{
+    background-color: #343434;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 992px) {
+  .main {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .main div:first-child {
+    width: 100%;
+  }
+
+  .main img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  }
+
+  .cards-place {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: left;
+  }
+
+  .Models {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .Models button {
+    align-self: flex-end;
+  }
+
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main {
+    padding: 15px;
+  }
+
+  .Models, .cards-place {
+    padding: 15px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    padding-left: 0;
+  }
+
+  footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>V8 ZONE - Sales</title>
+    <link rel="website icon" type="image/png" href="./images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+        }
+            header {
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration:none;
+    color:white;
+}
+
+.logo p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 50px;
+    border-radius: 8px;
+}
+
+
+nav {
+    display:flex;
+    justify-content:center;}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    background:#333;
+    padding: 8px 12px;
+    border-radius:50px;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #e8e6e6;
+    background:grey;
+}
+#logout:hover{
+    background:red;}
+
+nav ul:hover > :not(:hover){
+    opacity:0.7;
+    transform: scale(0.7);
+    transition: all 0.3s ease;
+}
+
+table {
+    font-family: Inter;
+    width: 60%;
+    border-spacing: 0;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+    color: black;
+}
+
+h2 {
+    font-family: Inter;
+    text-align: center;
+    color: black;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+th {
+    background: #cfcdcd;
+    height: 40px;
+}
+
+td {
+    background: #dedada;
+    height: 30px;
+    text-align: center;
+    border: 2px solid #000;
+}
+
+.l1 {
+    width: 40px;
+    height: auto;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+.s1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.s1 img {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+}
+footer {
+      background-color: #333;
+      padding: 20px 30px;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+    footer .foo {
+      margin-top: 10px;
+      font-size: 14px;
+      color: white;
+      text-align: center;
+    }
+    video {
+        width: 600px;
+        height: auto;
+        margin-left: 400px;
+        border-radius: 10px;
+        box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+    }
+
+    /* ستايلات خاصة للشاشات المتوسطة */
+@media (min-width:950px) and (max-width:1150px){
+    video{
+        margin-left: 170px; 
+    }
+    
+}
+
+/* ستايلات خاصة للتلفون */
+@media (max-width:950px) {
+    
+
+    video{
+        margin-left: 170px;
+    }
+}
+    </style>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <header>
+        <a href="Mosaab.html" class="logo">
+            <img src="./images/Logo.png">
+            <p>V8 ZONE</p>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="Mosaab.html">Home</a></li>
+                <li><a href="Fathy.html">Cars</a></li>
+                <li><a href="YOUCCEF.html">News</a></li>
+                <li><a href="Youssef.html">Finance</a></li>
+                <li><a href="Mohab.html">About Us</a></li>
+                <li><a href="Adam.html">Contact Us</a></li>
+                <li><a href="Nouran.html" id="logout"> Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Global car sales by company</h2>
+
+    <table>
+        <tr>
+            <th>COMPANY</th>
+            <th>MOST SOLD CAR TYPE</th>
+            <th>UNITS SOLD</th>
+        </tr>
+        <tr>
+            <td><img class="l1" src="./images/mazda.png"></td>
+            <td>Mazda (CX-5 / Mazda3)</td>
+            <td>(70M / 89.6M)</td>
+        </tr>
+        <tr>
+            <td><img class="l1" src="./images/nissan.png"></td>
+            <td>Nissan (Qashqai/nissmo)</td>
+            <td>(40M / 64.5M)</td>
+        </tr>
+        <tr>
+            <td><img class="l1" src="./images/porsche.png"></td>
+            <td>Porsche (911 turbo / gtr 911)</td>
+            <td>(40M / 43.5)</td>
+        </tr>
+        <tr>
+            <td><img class="l1" src="./images/tesla.png"></td>
+            <td>Tesla (Model Y / Model s)</td>
+            <td>(60M / 97.7M)</td>
+        </tr>
+        <tr>
+            <td><img class="l1" src="./images/chevrolet.png"></td>
+            <td>Chevrolet (zr1 / Cruze)</td>
+            <td>(20M / 49.6M)</td>
+        </tr>
+        <tr>
+            <td><img class="l1" src="./images/mercedes .png"></td>
+            <td>Mercedes (carbiolet / amg)</td>
+            <td>(120M / 151.9M)</td>
+        </tr>
+    </table>
+
+    <section class="s1">
+        <img class="img1" src="./images/piechart.png" alt="piechart">
+        <img class="img2" src="./images/histogram.png" alt="histogram">
+    </section>
+    <video src="./images/vid.mp4" controls autoplay>sales video</video>
+    <footer>
+        <div class="foo">&copy; 2025 V8 ZONE. All rights reserved</div>
+    </footer>
+</body>
+</html>
