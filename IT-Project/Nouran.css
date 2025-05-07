@@ -72,8 +72,11 @@ form a {
     line-height: 40px;
     text-decoration: none;
     border: 2px solid black;
+    box-sizing:border-box;
+    padding-bottom:40px;
 }
-
+.Log:hover{
+    background:grey;}
 
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
